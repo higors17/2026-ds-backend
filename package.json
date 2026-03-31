@@ -1,0 +1,29 @@
+{
+  "name": "2026-ds-backend",
+  "version": "1.0.0",
+  "description": "projeto para aprender api com mvc ",
+  "keywords": [
+    "MVC"
+  ],
+  "homepage": "https://github.com/higors17/2026-ds-backend#readme",
+  "bugs": {
+    "url": "https://github.com/higors17/2026-ds-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higors17/2026-ds-backend.git"
+  },
+  "license": "ISC",
+  "author": "higors17",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.14"
+  }
+}
