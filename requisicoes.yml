@@ -10,7 +10,7 @@ collection:
   - url: http://localhost:3000/
     name: Teste API
     meta:
-      id: req_53a7ba2bbf3342f69dbed1a66786f436
+      id: req_c6f5c8835c6948bcb3e04f6cf8fb66df
       created: 1778539600323
       modified: 1778540108599
       isPrivate: false
@@ -33,9 +33,9 @@ collection:
   - url: http://localhost:3000/users
     name: Listagem usuários
     meta:
-      id: req_5fd33ba5dabc4abcad2d058c10ba3c66
+      id: req_c8ce81e8e8a9428680215e055696a082
       created: 1778540159022
-      modified: 1778540185761
+      modified: 1779150040778
       isPrivate: false
       description: ""
       sortKey: -1778539600273
@@ -56,7 +56,7 @@ collection:
   - url: http://localhost:3000/users
     name: Criar usuário
     meta:
-      id: req_9808ad63f54741bd8c8f20ea9dc94b84
+      id: req_c9220f19595e44c084ba742d88835f74
       created: 1778540827323
       modified: 1778541524361
       isPrivate: false
@@ -84,16 +84,39 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: http://localhost:3000/users/1
+    name: Busca usuário por ID
+    meta:
+      id: req_915ce60af3fd49ccb5af2a1e57fca20d
+      created: 1779150059132
+      modified: 1779152938460
+      isPrivate: false
+      description: ""
+      sortKey: -1778539600248
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1778539485200
-    modified: 1778539485200
+    created: 1779142577962
+    modified: 1779142577962
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1778539485197
-    modified: 1778539485197
+    created: 1779142577956
+    modified: 1779142577956
     isPrivate: false
