@@ -10,17 +10,38 @@ const create = (user) => {
     return user
 }
 
-
-    const findById = (id) => {
-        return usersList.find( user => usersList.id === user)
-   
-        
+const findById = (id) => {
+    return usersList.find( user => user.id === id )
 }
 
+const update = (id, data) => {
+    const user = usersList.find(user => user.id === id)
 
+    if ( !user ) return null
+
+    if(data.name){
+    user.name = data.name
+    }
+
+    return user
+}
+
+const remove = (id) => {
+    const index = usersList.findIndex(user => user.id === id)
+
+    if ( index === -1) return null
+
+    const deleted = users[index]
+
+    users.splice(index, 1)
+
+    return deleted
+}
 
 module.exports = {
     findAll,
     create,
-    findById
+    findById,
+    update,
+    remove
 }
