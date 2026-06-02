@@ -41,26 +41,26 @@ const updateUser = (req, res) => {
     const { name } = req.body
 
     const newData = {
-        name : name
+        name: name
     }
 
     const updatedUser = userModel.update(id, newData)
 
-     if ( !updatedUser ) {
+    if(!updatedUser) {
         return res.status(404).json({
             message: "Usuário não encontrado"
         })
-     }
+    }
 
     return res.json(updatedUser)
 }
 
 const deleteUser = (req, res) => {
-    const id = Number(req.body.id)
+    const id = Number(req.params.id)
 
-    const deletedUser = userModel.remove[id]
+    const deletedUser = userModel.remove(id)
 
-    if (!deletedUser) {
+    if(!deletedUser) {
         return res.status(404).json({
             message: "Usuário não encontrado"
         })
@@ -68,9 +68,8 @@ const deleteUser = (req, res) => {
 
     return res.json({
         message: "Usuário removido"
-    }) 
-    }
-
+    })
+}
 
 module.exports = {
     createUser,
@@ -78,5 +77,4 @@ module.exports = {
     getUserById,
     updateUser,
     deleteUser
-    
 }

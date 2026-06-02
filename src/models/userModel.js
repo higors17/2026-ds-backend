@@ -15,27 +15,27 @@ const findById = (id) => {
 }
 
 const update = (id, data) => {
-    const user = usersList.find(user => user.id === id)
+    const user = usersList.find( user => user.id === id )
 
-    if ( !user ) return null
+    if (!user) return null
 
     if(data.name){
-    user.name = data.name
+        user.name = data.name
     }
 
     return user
 }
 
 const remove = (id) => {
-    const index = usersList.findIndex(user => user.id === id)
+    const index = usersList.findIndex( user => user.id === id )
 
-    if ( index === -1) return null
+    if (index === -1) return null
 
-    const deleted = users[index]
+    const deletedUser = usersList[index]
 
-    users.splice(index, 1)
+    usersList.splice(index, 1)
 
-    return deleted
+    return deletedUser
 }
 
 module.exports = {
